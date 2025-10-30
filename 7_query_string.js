@@ -18,6 +18,10 @@ app.get("/", (req, res)=>{
     res.send("You contacted the root path");
 
 
+    
+
+
+
 
 })
 
@@ -28,41 +32,26 @@ app.get("/", (req, res)=>{
 
 
 
-//http://localhost:8080/search?q=shoaib
-
-// app.get("/search", (req, res)=>{
-
-
-//     let {q} =  req.query;
-
-
-//    if(!q)
-//    {
-
-//         res.send("No query string received ");
-
-//    }
-    
-
-//     res.send(`You searched for ${q}`);
-
-
-
-// })
-
-
-
-// Example-2 : Two Query strings 
-
-
+http://localhost:8080/search?q=shoaib
 
 app.get("/search", (req, res)=>{
 
 
-    let {q, id} =  req.query;
+    let {q} =  req.query;
 
-    res.send(`You searched for the ${q} and ${id }`);
+
+   if(!q)
+   {
+
+        res.send("No query string received ");
+
+   }
     
+
+    res.send(`You searched for ${q}`);
+
 
 
 })
+
+
